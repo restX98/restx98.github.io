@@ -10,7 +10,7 @@ const Directions = {
   UP: 'UP',
   RIGHT: 'RX',
   DOWN: 'DW',
-  LEFT: 'LX'
+  LEFT: 'LX',
 }
 
 // Provider component to wrap the entire game and provide the game state
@@ -19,7 +19,7 @@ export const SnakeGameProvider = ({ children }) => {
   const [gridDimension, setGridDimension] = useState({ cols: 0, rows: 0 })
   const [windowSize, setWindowSize] = useState({
     width: 0,
-    height: 0
+    height: 0,
   })
   const [snake, setSnake] = useState([{ x: 9, y: 10 }, { x: 8, y: 10 }, { x: 7, y: 10 }, { x: 6, y: 10 }, { x: 5, y: 10 }])
   const [foods, setFoods] = useState([{ x: 10, y: 15 }])
@@ -30,7 +30,7 @@ export const SnakeGameProvider = ({ children }) => {
   useEffect(() => {
     setWindowSize({
       width: window.innerWidth,
-      height: window.innerHeight
+      height: window.innerHeight,
     })
   }, [])
 
@@ -38,7 +38,7 @@ export const SnakeGameProvider = ({ children }) => {
     const handleResize = () => {
       setWindowSize({
         width: window.innerWidth,
-        height: window.innerHeight
+        height: window.innerHeight,
       })
     }
 

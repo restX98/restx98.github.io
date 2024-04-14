@@ -4,7 +4,6 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 
 import { SnakeGameProvider } from '@/context/snake-game-context'
-// const SnakeGameProvider = dynamic(() => import('@/context/snake-game-context'), { ssr: false });
 
 const inter = Inter({ subsets: ['latin'] })
 
