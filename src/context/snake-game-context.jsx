@@ -35,17 +35,18 @@ export const SnakeGameProvider = ({ children }) => {
 
     window.addEventListener('resize', handleResize)
 
-    const cols = Math.ceil(windowSize.width / (tileSize))
+    const cols = Math.floor(windowSize.width / (tileSize))
     const rows = Math.floor(windowSize.height / (tileSize))
     setGridDimension(() => ({ rows, cols }))
 
     return () => window.removeEventListener('resize', handleResize)
-  }, [windowSize.width, windowSize.height])
+  }, [windowSize.width, windowSize.height, tileSize])
 
   const addFood = (newFood) => {
     setFoods(prevFoods => [...prevFoods, newFood])
     console.log('Foods', foods)
   }
+
   return (
     <SnakeGameContext.Provider value={{ tileSize, gridDimension, snake, foods, addFood }}>
       <div className="bg-grey-800 min-h-screen max-h-screen overflow-hidden flex flex-col justify-evenly">

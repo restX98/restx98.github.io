@@ -24,7 +24,7 @@ export function Tile({ coords }) {
     } else {
       setBgColor('bg-gray-700')
     }
-  }, [foods, snake])
+  }, [foods, snake, coords.col, coords.row])
 
 
   return (
