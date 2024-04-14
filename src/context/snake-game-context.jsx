@@ -2,6 +2,7 @@
 
 import { createContext, useContext, useState, useEffect } from 'react'
 import { SnakeGrid } from '@/components/snake/grid'
+import { useInterval } from '@/lib/utils'
 
 const SnakeGameContext = createContext()
 
@@ -13,10 +14,11 @@ export const SnakeGameProvider = ({ children }) => {
     width: 0,
     height: 0
   })
-  const [snake, setSnake] = useState([{ x: 5, y: 10 }, { x: 6, y: 10 }, { x: 7, y: 10 }, { x: 8, y: 10 }, { x: 9, y: 10 }])
+  const [snake, setSnake] = useState([{ x: 9, y: 10 }, { x: 8, y: 10 }, { x: 7, y: 10 }, { x: 6, y: 10 }, { x: 5, y: 10 }])
   const [foods, setFoods] = useState([{ x: 10, y: 15 }])
 
-  const [count, setCount] = useState(0)
+  const [direction, setDirection] = useState('RX')
+  const [changeCount, setChangeCount] = useState(5)
 
   useEffect(() => {
     setWindowSize({
@@ -46,6 +48,48 @@ export const SnakeGameProvider = ({ children }) => {
     setFoods(prevFoods => [...prevFoods, newFood])
     console.log('Foods', foods)
   }
+
+  const addSnakeTail = () => {
+    setSnake(prevSnake => [...prevSnake, prevSnake.at(-1)])
+  }
+
+  function getNewHead() {
+    const head = snake.at(0)
+    switch (direction) {
+      case 'UP':
+        return { x: head.x, y: (head.y + 1) % gridDimension.rows }
+      case 'RX':
+        return { x: (head.x + 1) % gridDimension.cols, y: head.y }
+      case 'DW':
+        return { x: head.x, y: (head.y - 1) % gridDimension.rows }
+      case 'LX':
+        return { x: (head.x - 1) % gridDimension.cols, y: head.y }
+      default:
+        return { x: (head.x + 1) % gridDimension.cols, y: head.y }
+    }
+
+  }
+
+  const updateSnake = () => {
+    const newHead = getNewHead()
+
+    const tail = snake.at(-1)
+    const isDigested = foods.findIndex((f) => f.x === tail.x && f.y === tail.y)
+
+    if (isDigested !== -1) {
+      setFoods((prevFood) => prevFood.filter((_, i) => i !== isDigested))
+      addSnakeTail()
+    }
+
+    setSnake((prevSnake) => {
+      const newSnake = [newHead, ...prevSnake.slice(0, -1)]
+      return newSnake
+    })
+  }
+
+  useInterval(() => {
+    updateSnake()
+  }, 150)
 
   return (
     <SnakeGameContext.Provider value={{ tileSize, gridDimension, snake, foods, addFood }}>
