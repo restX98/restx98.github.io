@@ -26,12 +26,14 @@ export function SnakeGrid() {
   const _rows = Array.from({ length: gridDimension.rows }, (_, index) => index)
 
   return (
-    _rows.map((row) => (
-      <div key={row} className="flex justify-evenly">
-        {_cols.map((col) => (
-          <Tile key={`${col}-${row}`} coords={{ col, row }} />
-        ))}
-      </div>
-    ))
+    <div className="bg-grey-800 min-h-screen max-h-screen overflow-hidden flex flex-col justify-evenly">
+      {_rows.map((row) => (
+        <div key={row} className="flex justify-evenly">
+          {_cols.map((col) => (
+            <Tile key={`${col}-${row}`} coords={{ col, row }} />
+          ))}
+        </div>)
+      )}
+    </div>
   )
 }

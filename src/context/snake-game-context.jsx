@@ -49,10 +49,8 @@ export const SnakeGameProvider = ({ children }) => {
 
   return (
     <SnakeGameContext.Provider value={{ tileSize, gridDimension, snake, foods, addFood }}>
-      <div className="bg-grey-800 min-h-screen max-h-screen overflow-hidden flex flex-col justify-evenly">
-        <SnakeGrid />
-        {children}
-      </div>
+      <SnakeGrid />
+      {children}
     </SnakeGameContext.Provider>
   )
 }
