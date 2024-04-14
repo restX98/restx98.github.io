@@ -3,7 +3,7 @@ import { siteConfig } from '@/config/site'
 import { Inter } from 'next/font/google'
 import './globals.css'
 
-import { SnakeGameProvider } from '@/context/snake-game-context'
+import { SnakeHouse } from '@/components/snake-house'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -17,9 +17,8 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.variable}>
         <main>
-          <SnakeGameProvider>
-            {children}
-          </SnakeGameProvider>
+          <SnakeHouse />
+          {children}
         </main>
       </body >
     </html >

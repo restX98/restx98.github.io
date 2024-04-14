@@ -1,7 +1,6 @@
 'use client'
 
 import { createContext, useContext, useState, useEffect } from 'react'
-import { SnakeGrid } from '@/components/snake/grid'
 import { useInterval } from '@/lib/utils'
 
 const SnakeGameContext = createContext()
@@ -15,7 +14,7 @@ const Directions = {
 
 // Provider component to wrap the entire game and provide the game state
 export const SnakeGameProvider = ({ children }) => {
-  const [tileSize, setTileSize] = useState(40)
+  const [tileSize] = useState(40)
   const [gridDimension, setGridDimension] = useState({ cols: 0, rows: 0 })
   const [windowSize, setWindowSize] = useState({
     width: 0,
@@ -122,7 +121,6 @@ export const SnakeGameProvider = ({ children }) => {
 
   return (
     <SnakeGameContext.Provider value={{ tileSize, gridDimension, snake, foods, addFood }}>
-      <SnakeGrid />
       {children}
     </SnakeGameContext.Provider>
   )
