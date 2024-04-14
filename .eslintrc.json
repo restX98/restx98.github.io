@@ -3,8 +3,9 @@
   "rules": {
     "semi": ["error", "never"],
     "quotes": ["error", "single"],
-    "indent": ["error", 2],
+    "indent": ["error", 2, { "SwitchCase": 1 }],
     "eol-last": ["error", "always"],
-    "no-multiple-empty-lines":  [2, {"max": 2, "maxEOF": 0}]
+    "no-multiple-empty-lines":  [2, {"max": 2, "maxEOF": 0}],
+    "eqeqeq": ["error", "always"]
   }
 }
