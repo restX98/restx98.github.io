@@ -1,23 +1,16 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { SnakeGameProvider, useSnakeGameContext } from '@/context/snake-game-context'
+import { useSnakeGameContext } from '@/context/snake-game-context'
+import { cn } from '@/lib/utils'
 
-export function SnakeHouse() {
-  return (
-    <SnakeGameProvider>
-      <SnakeGrid />
-    </SnakeGameProvider>
-  )
-}
-
-function SnakeGrid() {
+export function SnakeHouse({ className, children }) {
   const { gridDimension } = useSnakeGameContext()
   const _cols = Array.from({ length: gridDimension.cols }, (_, index) => index)
   const _rows = Array.from({ length: gridDimension.rows }, (_, index) => index)
 
   return (
-    <div className="bg-grey-800 min-h-screen max-h-screen min-w-screen max-w-screen overflow-hidden flex flex-col justify-evenly absolute">
+    <div className={cn(className, 'bg-grey-800 max-h-full h-full max-w-full w-full overflow-hidden flex flex-col justify-evenly')}>
       {_rows.map((row) => (
         <div key={row} className="flex w-screen justify-evenly">
           {_cols.map((col) => (
@@ -56,7 +49,7 @@ function Tile({ coords }) {
 
   return (
     <div className={`w-10 h-10 p-1 ${tileClasses}`}>
-      <div onClick={() => addFood({ x: coords.col, y: coords.row })} className={'w-full h-full rounded-sm'}>
+      <div onClick={() => addFood({ x: coords.col, y: coords.row })} className={'w-full h-full rounded-sm shadow-[inset_rgba(68,_68,_68,0.7)_2px_2px_4px,inset_rgba(34,_34,_34,0.7)_-2px_-2px_4px]'}>
       </div>
     </div>
   )

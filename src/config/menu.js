@@ -1,18 +1,18 @@
 export const items = [
   {
-    name: 'About Me',
+    label: 'About Me',
     href: '/about-me',
   },
   {
-    name: 'Portfolio',
+    label: 'Portfolio',
     href: '/portfolio',
   },
   {
-    name: 'Resume',
+    label: 'Resume',
     href: '/resume',
   },
   {
-    name: 'Contact',
+    label: 'Contact',
     href: '/contact',
   },
 ]

@@ -5,6 +5,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      margin: {
+        '2px': '2px',
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
