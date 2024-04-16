@@ -1,4 +1,6 @@
 import { useEffect, useRef } from 'react'
+import { clsx } from 'clsx'
+import { twMerge } from 'tailwind-merge'
 
 // Copied from https://overreacted.io/making-setinterval-declarative-with-react-hooks/
 export function useInterval(callback, delay) {
@@ -19,4 +21,8 @@ export function useInterval(callback, delay) {
       return () => clearInterval(id)
     }
   }, [delay])
+}
+
+export function cn(...inputs) {
+  return twMerge(clsx(inputs))
 }
