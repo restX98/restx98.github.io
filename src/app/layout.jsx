@@ -20,10 +20,11 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.variable}>
         <SnakeGameProvider>
-          <main className='flex flex-col min-h-screen max-h-screen min-w-screen max-w-screen overflow-hidden bg-zinc-800'>
+          <main className="flex flex-col min-h-screen max-h-screen min-w-screen max-w-screen overflow-hidden bg-zinc-800">
             <Navbar className="flex-none" items={items} />
-            <SnakeHouse className='flex-auto' />
-            {children}
+            <SnakeHouse className='flex-auto relative'>
+              {children}
+            </SnakeHouse>
           </main>
         </SnakeGameProvider>
       </body >

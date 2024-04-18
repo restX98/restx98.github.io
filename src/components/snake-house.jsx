@@ -5,14 +5,35 @@ import { useSnakeGameContext } from '@/context/snake-game-context'
 import { cn } from '@/lib/utils'
 
 export function SnakeHouse({ className, children }) {
+  return (
+    <div className={className}>
+      <BoxContainer>
+        {children}
+      </BoxContainer>
+      <Grid className="max-h-full h-full max-w-full w-full overflow-hidden absolute top-0 left-0" />
+    </div>
+  )
+}
+
+function BoxContainer({ children }) {
+  return (
+    <div className="max-h-full h-full max-w-full w-full overflow-hidden absolute top-0 left-0">
+      <div className="container h-full flex items-center justify-center mx-auto px-4 [&>*]:z-10 [&>*]:relative">
+        {children}
+      </div>
+    </div>
+  )
+}
+
+function Grid({ className }) {
   const { gridDimension } = useSnakeGameContext()
   const _cols = Array.from({ length: gridDimension.cols }, (_, index) => index)
   const _rows = Array.from({ length: gridDimension.rows }, (_, index) => index)
 
   return (
-    <div className={cn(className, 'max-h-full h-full max-w-full w-full overflow-hidden flex flex-col justify-evenly')}>
+    <div className={cn(className, 'flex flex-col justify-evenly')}>
       {_rows.map((row) => (
-        <div key={row} className="flex w-screen justify-evenly">
+        <div key={row} className="w-screen flex justify-evenly">
           {_cols.map((col) => (
             <Tile key={`${col}-${row}`} coords={{ col, row }} />
           ))}
