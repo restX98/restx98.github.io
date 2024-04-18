@@ -5,8 +5,9 @@ import { useSnakeGameContext } from '@/context/snake-game-context'
 import { cn } from '@/lib/utils'
 
 export function SnakeHouse({ className, children }) {
+  const { houseRef } = useSnakeGameContext()
   return (
-    <div className={className}>
+    <div ref={houseRef} className={className}>
       <BoxContainer>
         {children}
       </BoxContainer>

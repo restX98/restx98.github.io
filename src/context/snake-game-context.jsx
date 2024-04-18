@@ -1,7 +1,8 @@
 'use client'
 
 import { createContext, useContext, useState, useEffect } from 'react'
-import { useInterval } from '@/lib/utils'
+import { useInterval } from '@/hooks/use-interval'
+import { useRefDimension } from '@/hooks/use-ref-dimension'
 
 const SnakeGameContext = createContext()
 
@@ -16,22 +17,13 @@ const Directions = {
 export const SnakeGameProvider = ({ children }) => {
   const [tileSize] = useState(40)
   const [gridDimension, setGridDimension] = useState({ cols: 0, rows: 0 })
-  const [windowSize, setWindowSize] = useState({
-    width: 0,
-    height: 0,
-  })
   const [snake, setSnake] = useState([{ x: 9, y: 10 }, { x: 8, y: 10 }, { x: 7, y: 10 }, { x: 6, y: 10 }, { x: 5, y: 10 }])
   const [foods, setFoods] = useState([{ x: 10, y: 15 }])
 
   const [direction, setDirection] = useState(Directions.RIGHT)
   const [changeCount, setChangeCount] = useState(5)
 
-  useEffect(() => {
-    setWindowSize({
-      width: window.innerWidth,
-      height: window.innerHeight,
-    })
-  }, [])
+  const [houseRef, windowSize] = useRefDimension()
 
   useEffect(() => {
     const handleResize = () => {
@@ -52,7 +44,6 @@ export const SnakeGameProvider = ({ children }) => {
 
   const addFood = (newFood) => {
     setFoods(prevFoods => [...prevFoods, newFood])
-    console.log('Foods', foods)
   }
 
   const addSnakeTail = () => {
@@ -120,7 +111,7 @@ export const SnakeGameProvider = ({ children }) => {
   }, 150)
 
   return (
-    <SnakeGameContext.Provider value={{ tileSize, gridDimension, snake, foods, addFood }}>
+    <SnakeGameContext.Provider value={{ houseRef, gridDimension, snake, foods, addFood }}>
       {children}
     </SnakeGameContext.Provider>
   )
