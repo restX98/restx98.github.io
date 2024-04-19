@@ -19,7 +19,7 @@ export function SnakeHouse({ className, children }) {
 function BoxContainer({ children }) {
   return (
     <div className="max-h-full h-full max-w-full w-full overflow-hidden absolute top-0 left-0">
-      <div className="container h-full flex items-center justify-center mx-auto px-4 [&>*]:z-10 [&>*]:relative">
+      <div className="container h-full mx-auto px-4 flex items-center justify-center [&>*]:z-10 [&>*]:relative">
         {children}
       </div>
     </div>
