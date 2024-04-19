@@ -3,8 +3,12 @@
 import { createContext, useContext, useState, useEffect } from 'react'
 import { useInterval } from '@/hooks/use-interval'
 import { useRefDimension } from '@/hooks/use-ref-dimension'
+import { getInRangeValue } from '@/lib/utils'
 
 const SnakeGameContext = createContext()
+
+const TIME_FRAME = 150
+const MAX_FORWARD_STEP = 15
 
 const Directions = {
   UP: 'UP',
@@ -21,25 +25,15 @@ export const SnakeGameProvider = ({ children }) => {
   const [foods, setFoods] = useState([{ x: 10, y: 15 }])
 
   const [direction, setDirection] = useState(Directions.RIGHT)
-  const [changeCount, setChangeCount] = useState(5)
+  const [changeCount, setChangeCount] = useState(0)
 
   const [houseRef, windowSize] = useRefDimension()
 
   useEffect(() => {
-    const handleResize = () => {
-      setWindowSize({
-        width: window.innerWidth,
-        height: window.innerHeight,
-      })
-    }
-
-    window.addEventListener('resize', handleResize)
-
-    const cols = Math.floor(windowSize.width / (tileSize))
-    const rows = Math.floor(windowSize.height / (tileSize))
-    setGridDimension(() => ({ rows, cols }))
-
-    return () => window.removeEventListener('resize', handleResize)
+    setGridDimension(() => ({
+      rows: Math.floor(windowSize.height / (tileSize)),
+      cols: Math.floor(windowSize.width / (tileSize)),
+    }))
   }, [windowSize.width, windowSize.height, tileSize])
 
   const addFood = (newFood) => {
@@ -62,14 +56,9 @@ export const SnakeGameProvider = ({ children }) => {
     setChangeCount(prev => prev - 1)
 
     if (changeCount === 0) {
-      setChangeCount(Math.floor(Math.random() * 15) + 1)
+      setChangeCount(Math.floor(Math.random() * MAX_FORWARD_STEP) + 1)
       setDirection(pickRandomDirection())
     }
-  }
-
-  const getInRangeValue = (value, max) => {
-    const range = max + 1
-    return (value % range + range) % range
   }
 
   const getNewHead = () => {
@@ -108,10 +97,17 @@ export const SnakeGameProvider = ({ children }) => {
 
   useInterval(() => {
     updateSnake()
-  }, 150)
+  }, TIME_FRAME)
 
   return (
-    <SnakeGameContext.Provider value={{ houseRef, gridDimension, snake, foods, addFood }}>
+    <SnakeGameContext.Provider
+      value={{
+        houseRef,
+        gridDimension,
+        snake,
+        foods,
+        addFood,
+      }}>
       {children}
     </SnakeGameContext.Provider>
   )
