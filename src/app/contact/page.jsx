@@ -6,7 +6,7 @@ export default function Portfolio() {
   return (
     <GlassModal>
       <div>
-        <span>Portfolio</span>
+        <span>Contact</span>
       </div>
     </GlassModal>
 

@@ -8,10 +8,6 @@ export const items = [
     href: '/portfolio',
   },
   {
-    label: 'Resume',
-    href: '/resume',
-  },
-  {
     label: 'Contact',
     href: '/contact',
   },
