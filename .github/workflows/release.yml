@@ -27,5 +27,6 @@ jobs:
         uses: changesets/action@v1
         with:
           version: pnpm ci:version
+          publish: pnpm ci:release
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}

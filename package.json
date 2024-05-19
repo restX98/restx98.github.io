@@ -11,7 +11,8 @@
     "format:check": "prettier . --check",
     "clean": "rimraf .next node_modules out",
     "changeset": "changeset",
-    "ci:version": "changeset version && pnpm install --lockfile-only"
+    "ci:version": "changeset version && pnpm install --lockfile-only",
+    "ci:release": "pnpm build && changeset tag"
   },
   "dependencies": {
     "@restx98/snake-house-react": "^0.2.1",
