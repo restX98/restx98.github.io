@@ -4,9 +4,8 @@ import { items } from "@/config/menu";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
-import { SnakeGameProvider } from "@/context/snake-game-context";
+import { SnakeGameProvider, SnakeHouse } from "@restx98/snake-house-react";
 import { Navbar } from "@/components/navbar";
-import { SnakeHouse } from "@/components/snake-house";
 
 const inter = Inter({ subsets: ["latin"] });
 
