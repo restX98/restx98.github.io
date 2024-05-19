@@ -1,11 +1,9 @@
 name: "CI setup"
 
-on:
-  workflow_call:
-    inputs:
-      config-path:
-        required: true
-        type: string
+inputs:
+  token:
+    description: 'Github Token'
+    required: true
 
 runs:
   using: "composite"
