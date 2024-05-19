@@ -1,5 +1,12 @@
 name: "CI setup"
 
+on:
+  workflow_call:
+    inputs:
+      config-path:
+        required: true
+        type: string
+
 runs:
   using: "composite"
   steps:
