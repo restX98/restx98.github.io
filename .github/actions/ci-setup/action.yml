@@ -1,4 +1,10 @@
 name: "CI setup"
+
+inputs:
+  token:
+    description: 'Github Token'
+    required: true
+
 runs:
   using: "composite"
   steps:
@@ -13,6 +19,15 @@ runs:
         registry-url: "https://npm.pkg.github.com"
         node-version: 21
         cache: "pnpm"
+
+    - name: Set Github Token
+      run: |
+        echo "//npm.pkg.github.com/:_authToken=${TOKEN}" > .npmrc
+        echo "_auth=${TOKEN}" >> .npmrc
+        echo "always-auth=true" >> .npmrc
+      env:
+        TOKEN: ${{inputs.token}}
+      shell: bash
 
     - name: Install dependencies
       run: pnpm install --no-frozen-lockfile
