@@ -1,4 +1,5 @@
 name: "CI setup"
+
 runs:
   using: "composite"
   steps:
@@ -20,7 +21,7 @@ runs:
         echo "_auth=${TOKEN}" >> .npmrc
         echo "always-auth=true" >> .npmrc
       env:
-        TOKEN: ${{secrets.GH_TOKEN}}
+        TOKEN: ${{inputs.token}}
       shell: bash
 
     - name: Install dependencies
