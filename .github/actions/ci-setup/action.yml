@@ -21,6 +21,7 @@ runs:
         echo "always-auth=true" >> .npmrc
       env:
         TOKEN: ${{secrets.GH_TOKEN}}
+      shell: bash
 
     - name: Install dependencies
       run: pnpm install --no-frozen-lockfile
