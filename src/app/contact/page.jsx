@@ -1,6 +1,6 @@
-'use client'
+"use client";
 
-import { GlassModal } from '@/components/glass-modal'
+import { GlassModal } from "@/components/glass-modal";
 
 export default function Portfolio() {
   return (
@@ -9,6 +9,5 @@ export default function Portfolio() {
         <span>Contact</span>
       </div>
     </GlassModal>
-
-  )
+  );
 }
