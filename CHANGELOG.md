@@ -1,5 +1,11 @@
 # restx98-website
 
+## 0.2.1
+
+### Patch Changes
+
+- 34c7b55: Dummy release: Added deploy workflow
+
 ## 0.2.0
 
 ### Minor Changes
