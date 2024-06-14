@@ -6,6 +6,7 @@ import "./globals.css";
 
 import { SnakeGameProvider, SnakeHouse } from "@restx98/snake-house-react";
 import { Navbar } from "@/components/navbar";
+import { Footer } from "@/components/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,9 +20,14 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.variable}>
         <SnakeGameProvider>
-          <main className="flex max-h-screen min-h-screen flex-col overflow-hidden bg-zinc-800">
+          <main className="fixed inset-0 flex h-dvh w-screen flex-col bg-zinc-800">
             <Navbar className="flex-none" items={items} />
-            <SnakeHouse className="relative flex-auto">{children}</SnakeHouse>
+            <div className="flex-auto">
+              <SnakeHouse className="container mx-auto px-8 py-6">
+                {children}
+              </SnakeHouse>
+            </div>
+            <Footer className="flex-none" />
           </main>
         </SnakeGameProvider>
       </body>

@@ -15,7 +15,7 @@
     "ci:release": "pnpm build && changeset tag"
   },
   "dependencies": {
-    "@restx98/snake-house-react": "^0.2.1",
+    "@restx98/snake-house-react": "^0.4.0",
     "clsx": "^2.1.0",
     "next": "14.2.1",
     "react": "^18",
