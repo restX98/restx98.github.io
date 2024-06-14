@@ -1,13 +1,18 @@
 "use client";
 
-import { GlassModal } from "@/components/glass-modal";
+import { GlassCard } from "@/components/glass-card";
+import { Markdown } from "@/components/markdown";
 
-export default function Portfolio() {
+import { pageContents } from "@/config/pageContents";
+
+export default function AboutMe() {
+  const { content } = pageContents.aboutMe;
+
   return (
-    <GlassModal>
-      <div>
-        <span>About Me</span>
+    <GlassCard className="snake-box">
+      <div className="mt-5 text-left">
+        <Markdown markdown={content} />
       </div>
-    </GlassModal>
+    </GlassCard>
   );
 }

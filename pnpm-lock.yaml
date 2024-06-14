@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@restx98/snake-house-react':
-        specifier: ^0.2.1
-        version: 0.2.1(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(tailwindcss@3.4.3)
+        specifier: ^0.4.0
+        version: 0.4.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(tailwindcss@3.4.3)
       clsx:
         specifier: ^2.1.0
         version: 2.1.0
@@ -23,6 +23,9 @@ importers:
       react-dom:
         specifier: ^18
         version: 18.2.0(react@18.2.0)
+      remarkable:
+        specifier: ^2.0.1
+        version: 2.0.1
       tailwind-merge:
         specifier: ^2.2.2
         version: 2.2.2
@@ -272,8 +275,8 @@ packages:
     resolution: {integrity: sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==}
     engines: {node: '>=14'}
 
-  '@restx98/snake-house-react@0.2.1':
-    resolution: {integrity: sha512-V92S4I89J4nBsgVSMLyPC7uL6GoRDqr9Q2rxUA59KIN8LrXw2v6OLvRKfFe8h6h25HT11T0dVvzAZYmYGlS22A==, tarball: https://npm.pkg.github.com/download/@restx98/snake-house-react/0.2.1/13585e4699a22326f5cd90a83195fa17d5b0724c}
+  '@restx98/snake-house-react@0.4.0':
+    resolution: {integrity: sha512-c15ypBoAzygLXKwmZDPchFb7UP9CQT6QLWDXAQ8X3QOtJINc+TbYAXF/n23tqbD50tYzubO8ZfIDR9lbVHospw==, tarball: https://npm.pkg.github.com/download/@restx98/snake-house-react/0.4.0/8704dcfa758dc0962d02f7c75d4789eb0d4d06d2}
     peerDependencies:
       react: ^18.2.0
       react-dom: ^18.2.0
@@ -437,6 +440,9 @@ packages:
 
   ast-types-flow@0.0.8:
     resolution: {integrity: sha512-OH/2E5Fg20h2aPrbe+QL8JZQFko0YZaF+j4mnQ7BGhfavO7OpSLa8a0y9sBwomHdSbkhTS8TQNayBfnW5DwbvQ==}
+
+  autolinker@3.16.2:
+    resolution: {integrity: sha512-JiYl7j2Z19F9NdTmirENSUUIIL/9MytEWtmzhfmsKPCp9E+G35Y0UNCMoM9tFigxT59qSc8Ml2dlZXOCVTYwuA==}
 
   autoprefixer@10.4.19:
     resolution: {integrity: sha512-BaENR2+zBZ8xXhM4pUaKUxlVdxZ0EZhjvbopwnXmxRUfqDmwSpC2lAi/QXvx7NRdPCo1WKEcEF6mV64si1z4Ew==}
@@ -1733,6 +1739,11 @@ packages:
     resolution: {integrity: sha512-NcDiDkTLuPR+++OCKB0nWafEmhg/Da8aUPLPMQbK+bxKKCm1/S5he+AqYa4PlMCVBalb4/yxIRub6qkEx5yJbw==}
     engines: {node: '>= 0.4'}
 
+  remarkable@2.0.1:
+    resolution: {integrity: sha512-YJyMcOH5lrR+kZdmB0aJJ4+93bEojRZ1HGDn9Eagu6ibg7aVZhc3OWbbShRid+Q5eAfsEqWxpe+g5W5nYNfNiA==}
+    engines: {node: '>= 6.0.0'}
+    hasBin: true
+
   require-directory@2.1.1:
     resolution: {integrity: sha512-fGxEI7+wsG9xrvdjsrlmL22OMTTiHRwAMroiEeMgq8gzoLC/PQr7RsRDSTLUg/bZAZtF+TVIkHc6/4RIKrui+Q==}
     engines: {node: '>=0.10.0'}
@@ -2459,7 +2470,7 @@ snapshots:
   '@pkgjs/parseargs@0.11.0':
     optional: true
 
-  '@restx98/snake-house-react@0.2.1(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(tailwindcss@3.4.3)':
+  '@restx98/snake-house-react@0.4.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(tailwindcss@3.4.3)':
     dependencies:
       clsx: 2.1.1
       react: 18.2.0
@@ -2653,6 +2664,10 @@ snapshots:
   arrify@1.0.1: {}
 
   ast-types-flow@0.0.8: {}
+
+  autolinker@3.16.2:
+    dependencies:
+      tslib: 2.6.2
 
   autoprefixer@10.4.19(postcss@8.4.38):
     dependencies:
@@ -4044,6 +4059,11 @@ snapshots:
       define-properties: 1.2.1
       es-errors: 1.3.0
       set-function-name: 2.0.2
+
+  remarkable@2.0.1:
+    dependencies:
+      argparse: 1.0.10
+      autolinker: 3.16.2
 
   require-directory@2.1.1: {}
 

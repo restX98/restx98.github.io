@@ -14,7 +14,7 @@ function NavItem({ label, active, href }) {
           active && "shadow-nav-item-active",
         )}
       >
-        <Link class="text-white" href={href}>
+        <Link className="text-white" href={href}>
           {label}
         </Link>
       </div>
@@ -27,8 +27,8 @@ export function Navbar({ className, items }) {
 
   return (
     <nav className={className}>
-      <div class="mx-auto p-2">
-        <div class="flex justify-center space-x-10">
+      <div className="mx-auto p-2">
+        <div className="flex justify-center space-x-10">
           {items.map((item, id) => (
             <NavItem
               key={id}

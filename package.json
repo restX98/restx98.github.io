@@ -15,11 +15,12 @@
     "ci:release": "pnpm build && changeset tag"
   },
   "dependencies": {
-    "@restx98/snake-house-react": "^0.2.1",
+    "@restx98/snake-house-react": "^0.4.0",
     "clsx": "^2.1.0",
     "next": "14.2.1",
     "react": "^18",
     "react-dom": "^18",
+    "remarkable": "^2.0.1",
     "tailwind-merge": "^2.2.2"
   },
   "devDependencies": {
