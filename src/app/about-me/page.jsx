@@ -9,7 +9,7 @@ export default function AboutMe() {
   const { content } = pageContents.aboutMe;
 
   return (
-    <GlassCard className="snake-box" >
+    <GlassCard className="snake-box">
       <div className="mt-5 text-left">
         <Markdown markdown={content} />
       </div>

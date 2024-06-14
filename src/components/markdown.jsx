@@ -1,9 +1,9 @@
 // TODO: Find a better way and localize string
 
-import { Remarkable } from 'remarkable';
+import { Remarkable } from "remarkable";
 
 const md = new Remarkable({
-  html: true
+  html: true,
 });
 
 function renderMarkdownToHTML(markdown) {

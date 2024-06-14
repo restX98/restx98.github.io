@@ -1,7 +1,6 @@
 export const pageContents = {
   aboutMe: {
-    content:
-      `
+    content: `
         <h3>IT</h3>
         <p>
           Ciao, sono Enrico, fin da piccolo mi sono trovato a smanettare davanti al computer, insomma, il classico nerd :)
@@ -39,17 +38,18 @@ export const pageContents = {
           <br />
           Grateful for your visit; see ya! :)
         </p>
-      `
+      `,
   },
   portfolio: {
-    title: "Qui troverai tutti i miei progetti / Here you will find all my projects:",
+    title:
+      "Qui troverai tutti i miei progetti / Here you will find all my projects:",
     projects: [
       {
         id: "snake-house-react",
         name: "Snake House React",
         repoUrl: "https://github.com/restX98/snake-house-react",
         pageUrl: "https://restx98.github.io/snake-house-react/",
-        image: "/images/snake-house-thumbnail.png"
+        image: "/images/snake-house-thumbnail.png",
       },
       {
         id: "commerce-laravel",
@@ -60,24 +60,24 @@ export const pageContents = {
         id: "unicar-app",
         name: "UniCar App",
         repoUrl: "https://github.com/restX98/UniCarApp",
-      }
-    ]
+      },
+    ],
   },
   contact: {
     title: "Contatti / Contacts",
     contacts: [
       {
         name: "Email",
-        url: "mailto:enrico.rest98@gmail.com"
+        url: "mailto:enrico.rest98@gmail.com",
       },
       {
         name: "Linkedin",
-        url: "https://www.linkedin.com/in/enricorestuccia"
+        url: "https://www.linkedin.com/in/enricorestuccia",
       },
       {
         name: "Github",
-        url: "https://github.com/restx98"
-      }
-    ]
-  }
+        url: "https://github.com/restx98",
+      },
+    ],
+  },
 };

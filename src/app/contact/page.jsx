@@ -8,10 +8,7 @@ export default function Contact() {
 
   return (
     <>
-      <GlassCard
-        className="snake-box mb-5"
-        title={title}
-      />
+      <GlassCard className="snake-box mb-5" title={title} />
       <div className="grid auto-rows-fr grid-cols-1 gap-4 lg:grid-cols-3">
         {contacts.map((p, id) => (
           <GlassCard
@@ -23,5 +20,5 @@ export default function Contact() {
         ))}
       </div>
     </>
-  )
+  );
 }

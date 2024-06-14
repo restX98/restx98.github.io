@@ -17,7 +17,14 @@ function LinkedGlassCard({ children, href, target }) {
   }
 }
 
-export function GlassCard({ children, className, title, image, link, target = "_blank" }) {
+export function GlassCard({
+  children,
+  className,
+  title,
+  image,
+  link,
+  target = "_blank",
+}) {
   return (
     <GlassContainer className={className}>
       <LinkedGlassCard href={link} target={target}>
