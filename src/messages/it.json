@@ -1,0 +1,63 @@
+{
+  "Header": {
+    "about-me": {
+      "label": "About Me",
+      "href": "/about-me"
+    },
+    "portfolio": {
+      "label": "Portfolio",
+      "href": "/portfolio"
+    },
+    "contact": {
+      "label": "Contact",
+      "href": "/contact"
+    }
+  },
+  "LocaleSwitcher": {
+    "label": "Cambia lingua",
+    "locale": "{locale, select, en {Inglese} it {Italiano} other {Unknown}}"
+  },
+  "AboutMePage": {
+    "content": "Ciao, sono Enrico, fin da piccolo mi sono trovato a smanettare davanti al computer, insomma, il classico nerd :)<br />Trovo affascinante cercare di capire come funzionano le cose, provare a ricostruirle e sperimentarci sopra.<br />Ho scoperto la programmazione alle superiori e sono rimasto affascinato da come fosse possibile immaginare qualsiasi cosa in quel piccolo ma immenso universo in cui si comincia a contare da 0. Ed eccoci qua :)<br />Credo di dover ancora trovare la mia vera strada, ma per il momento lavoro come web developer.<br />La mia seconda grande passione è la musica.<br />Mi piacciono i giochi da tavolo, la pizza e bla bla bla.<br />Se ci conosceremo, avremo modo di parlarne.<br />Grazie per essere passato e a presto! :)"
+  },
+  "PortfolioPage": {
+    "title": "Qui troverai tutti i miei progetti:",
+    "projects": {
+      "snake-house-react": {
+        "name": "Snake House React",
+        "repoUrl": "https://github.com/restX98/snake-house-react",
+        "pageUrl": "https://restx98.github.io/snake-house-react/",
+        "image": "/images/snake-house-thumbnail.png"
+      },
+      "commerce-laravel": {
+        "name": "eCommerce Laravel",
+        "repoUrl": "https://github.com/restX98/commerce-laravel",
+        "pageUrl": "",
+        "image": ""
+      },
+      "unicar-app": {
+        "name": "UniCar App",
+        "repoUrl": "https://github.com/restX98/UniCarApp",
+        "pageUrl": "",
+        "image": ""
+      }
+    }
+  },
+  "ContactPage": {
+    "title": "Contacts",
+    "contacts": {
+      "email": {
+        "name": "Email",
+        "url": "mailto:enrico.rest98@gmail.com"
+      },
+      "github": {
+        "name": "Github",
+        "url": "https://github.com/restx98"
+      },
+      "linkedin": {
+        "name": "Linkedin",
+        "url": "https://www.linkedin.com/in/enricorestuccia"
+      }
+    }
+  }
+}

@@ -1,7 +1,8 @@
 "use client";
 
-import Link from "next/link";
+import { Link } from "@/navigation";
 import { GlassContainer } from "./glass-container";
+import GHIcon from "@/assets/github.svg";
 
 import { cn } from "@/lib/utils";
 
@@ -23,6 +24,7 @@ export function GlassCard({
   title,
   image,
   link,
+  repoLink,
   target = "_blank",
 }) {
   return (
@@ -37,6 +39,15 @@ export function GlassCard({
         >
           <span className="uppercase">{title}</span>
           {children}
+          {repoLink && (
+            <Link
+              className="absolute bottom-0 right-0 m-1 rounded border border-gray-400 bg-white p-1 font-semibold text-zinc-800 shadow hover:bg-gray-100"
+              href={repoLink}
+              target="_blank"
+            >
+              <GHIcon />
+            </Link>
+          )}
         </div>
         {image && (
           <img
