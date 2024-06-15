@@ -1,5 +1,6 @@
-// TODO: Find a better way and localize string
+"use client";
 
+// TODO: Find a better way
 import { Remarkable } from "remarkable";
 
 const md = new Remarkable({
