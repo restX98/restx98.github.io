@@ -3,15 +3,15 @@
 import { GlassCard } from "@/components/glass-card";
 import { Markdown } from "@/components/markdown";
 
-import { pageContents } from "@/config/pageContents";
+import { useTranslations } from "next-intl";
 
 export default function AboutMe() {
-  const { content } = pageContents.aboutMe;
+  const t = useTranslations("AboutMePage");
 
   return (
     <GlassCard className="snake-box">
       <div className="mt-5 text-left">
-        <Markdown markdown={content} />
+        <Markdown markdown={t("content")} />
       </div>
     </GlassCard>
   );

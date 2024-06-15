@@ -25,6 +25,18 @@ module.exports = {
   },
   rules: {
     "@next/next/no-img-element": "off",
-    "tailwindcss/no-custom-classname": "off"
+    "tailwindcss/no-custom-classname": "off",
+    'no-restricted-imports': [
+      'error',
+      {
+        name: 'next/link',
+        message: 'Please import from `@/navigation` instead.'
+      },
+      {
+        name: 'next/navigation',
+        importNames: ['permanentRedirect', 'useRouter', 'usePathname'],
+        message: 'Please import from `@/navigation` instead.'
+      }
+    ]
   },
 };

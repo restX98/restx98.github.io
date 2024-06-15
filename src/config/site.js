@@ -4,4 +4,6 @@ export const siteConfig = {
   links: {
     github: "https://github.com/restX98",
   },
+  locales: ["en", "it"],
+  localePrefix: "always",
 };

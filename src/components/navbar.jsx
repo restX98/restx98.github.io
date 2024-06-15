@@ -1,7 +1,8 @@
 "use client";
 
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { useTranslations, useMessages } from "next-intl";
+import { Link, usePathname } from "@/navigation";
+import LocaleSwitcher from "./locale-switcher";
 
 import { cn } from "@/lib/utils";
 
@@ -14,7 +15,7 @@ function NavItem({ label, active, href }) {
           active && "shadow-nav-item-active",
         )}
       >
-        <Link className="text-white" href={href}>
+        <Link className="whitespace-nowrap text-white" href={href}>
           {label}
         </Link>
       </div>
@@ -22,13 +23,22 @@ function NavItem({ label, active, href }) {
   );
 }
 
-export function Navbar({ className, items }) {
+export function Navbar({ className }) {
   const pathname = usePathname();
+
+  const messages = useMessages();
+
+  const t = useTranslations("Header");
+  const headerKeys = Object.keys(messages.Header);
+  const items = headerKeys.map((key) => ({
+    label: t(`${key}.label`),
+    href: t(`${key}.href`),
+  }));
 
   return (
     <nav className={className}>
       <div className="mx-auto p-2">
-        <div className="flex justify-center space-x-10">
+        <div className="flex items-center justify-center space-x-10">
           {items.map((item, id) => (
             <NavItem
               key={id}
@@ -37,6 +47,7 @@ export function Navbar({ className, items }) {
               active={pathname === item.href}
             />
           ))}
+          <LocaleSwitcher />
         </div>
       </div>
     </nav>
