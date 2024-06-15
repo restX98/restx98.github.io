@@ -1,5 +1,11 @@
 # restx98-website
 
+## 0.3.0
+
+### Minor Changes
+
+- 18df07f: Installed next-intl, configured messages, added locale switcher
+
 ## 0.2.3
 
 ### Patch Changes
