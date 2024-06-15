@@ -28,7 +28,7 @@ export function Navbar({ className, items }) {
   return (
     <nav className={className}>
       <div className="mx-auto p-2">
-        <div className="flex justify-center space-x-10">
+        <div className="flex items-center justify-center space-x-10">
           {items.map((item, id) => (
             <NavItem
               key={id}
