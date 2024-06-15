@@ -32,7 +32,7 @@ export function Navbar({ className }) {
   const headerKeys = Object.keys(messages.Header);
   const items = headerKeys.map((key) => ({
     label: t(`${key}.label`),
-    href: t(`${key}.href`)
+    href: t(`${key}.href`),
   }));
 
   return (
