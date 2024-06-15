@@ -1,16 +1,14 @@
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages } from "next-intl/server";
-import { unstable_setRequestLocale } from "next-intl/server";
-
-import { siteConfig } from "@/config/site";
-import { items } from "@/config/menu";
-
+import { getMessages, unstable_setRequestLocale } from "next-intl/server";
 import { Inter } from "next/font/google";
-import "@/app/globals.css";
 
 import { SnakeGameProvider, SnakeHouse } from "@restx98/snake-house-react";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
+
+import { siteConfig } from "@/config/site";
+
+import "@/app/globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -34,7 +32,7 @@ export default async function RootLayout({ children, params: { locale } }) {
         <SnakeGameProvider>
           <NextIntlClientProvider messages={messages}>
             <main className="fixed inset-0 flex h-dvh w-screen flex-col bg-zinc-800">
-              <Navbar className="flex-none" items={items} />
+              <Navbar className="flex-none" />
               <div className="flex-auto">
                 <SnakeHouse className="container mx-auto px-8 py-6">
                   {children}

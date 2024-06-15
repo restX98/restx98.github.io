@@ -1,4 +1,18 @@
 {
+  "Header": {
+    "about-me": {
+      "label": "About Me",
+      "href": "/about-me"
+    },
+    "portfolio": {
+      "label": "Portfolio",
+      "href": "/portfolio"
+    },
+    "contact": {
+      "label": "Contact",
+      "href": "/contact"
+    }
+  },
   "LocaleSwitcher": {
     "label": "Cambia lingua",
     "locale": "{locale, select, en {Inglese} it {Italiano} other {Unknown}}"

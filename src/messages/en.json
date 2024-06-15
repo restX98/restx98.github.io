@@ -1,4 +1,18 @@
 {
+  "Header": {
+    "about-me": {
+      "label": "About Me",
+      "href": "/about-me"
+    },
+    "portfolio": {
+      "label": "Portfolio",
+      "href": "/portfolio"
+    },
+    "contact": {
+      "label": "Contact",
+      "href": "/contact"
+    }
+  },
   "LocaleSwitcher": {
     "label": "Change language",
     "locale": "{locale, select, en {English} it {Italian} other {Unknown}}"
@@ -44,12 +58,6 @@
         "name": "Linkedin",
         "url": "https://www.linkedin.com/in/enricorestuccia"
       }
-    }
-  },
-  "Header": {
-    "AboutMe": {
-      "title": "About Me",
-      "url": "/about-me"
     }
   }
 }

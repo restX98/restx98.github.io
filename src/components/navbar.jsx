@@ -1,5 +1,6 @@
 "use client";
 
+import { useTranslations, useMessages } from "next-intl";
 import { Link, usePathname } from "@/navigation";
 import LocaleSwitcher from "./locale-switcher";
 
@@ -22,8 +23,17 @@ function NavItem({ label, active, href }) {
   );
 }
 
-export function Navbar({ className, items }) {
+export function Navbar({ className }) {
   const pathname = usePathname();
+
+  const messages = useMessages();
+
+  const t = useTranslations("Header");
+  const headerKeys = Object.keys(messages.Header);
+  const items = headerKeys.map((key) => ({
+    label: t(`${key}.label`),
+    href: t(`${key}.href`)
+  }));
 
   return (
     <nav className={className}>
