@@ -1,0 +1,55 @@
+{
+  "LocaleSwitcher": {
+    "label": "Change language",
+    "locale": "{locale, select, en {English} it {Italian} other {Unknown}}"
+  },
+  "AboutMePage": {
+    "content": "Hi, I'm Enrico, since I was a child, I've spent a lot of time tinkering with computers, you know, the classic nerd :)<br />I find it fascinating to try to understand how things work, rebuild them, and experiment with them.<br />I discovered programming in high school and was fascinated by how it was possible to imagine anything in that small universe where we start counting from 0. And here we are :)<br />I believe I still have to find my path, but for the moment, I work as a web developer.<br />My second great passion is music; I've been playing the piano since I was a child.<br />I like board games, pizza, and bla bla bla.<br />If we get to know each other, we'll have the opportunity to talk about it.<br />Grateful for your visit; see ya! :)"
+  },
+  "PortfolioPage": {
+    "title": "Here you will find all my projects:",
+    "projects": {
+      "snake-house-react": {
+        "name": "Snake House React",
+        "repoUrl": "https://github.com/restX98/snake-house-react",
+        "pageUrl": "https://restx98.github.io/snake-house-react/",
+        "image": "/images/snake-house-thumbnail.png"
+      },
+      "commerce-laravel": {
+        "name": "eCommerce Laravel",
+        "repoUrl": "https://github.com/restX98/commerce-laravel",
+        "pageUrl": "",
+        "image": ""
+      },
+      "unicar-app": {
+        "name": "UniCar App",
+        "repoUrl": "https://github.com/restX98/UniCarApp",
+        "pageUrl": "",
+        "image": ""
+      }
+    }
+  },
+  "ContactPage": {
+    "title": "Contacts",
+    "contacts": {
+      "email": {
+        "name": "Email",
+        "url": "mailto:enrico.rest98@gmail.com"
+      },
+      "github": {
+        "name": "Github",
+        "url": "https://github.com/restx98"
+      },
+      "linkedin": {
+        "name": "Linkedin",
+        "url": "https://www.linkedin.com/in/enricorestuccia"
+      }
+    }
+  },
+  "Header": {
+    "AboutMe": {
+      "title": "About Me",
+      "url": "/about-me"
+    }
+  }
+}

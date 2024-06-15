@@ -1,7 +1,7 @@
 "use client";
 
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { Link, usePathname } from "@/navigation";
+import LocaleSwitcher from "./locale-switcher";
 
 import { cn } from "@/lib/utils";
 
@@ -14,7 +14,7 @@ function NavItem({ label, active, href }) {
           active && "shadow-nav-item-active",
         )}
       >
-        <Link className="text-white" href={href}>
+        <Link className="whitespace-nowrap text-white" href={href}>
           {label}
         </Link>
       </div>
@@ -37,6 +37,7 @@ export function Navbar({ className, items }) {
               active={pathname === item.href}
             />
           ))}
+          <LocaleSwitcher />
         </div>
       </div>
     </nav>
