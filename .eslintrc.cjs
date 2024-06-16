@@ -34,7 +34,7 @@ module.exports = {
       },
       {
         name: 'next/navigation',
-        importNames: ['permanentRedirect', 'useRouter', 'usePathname'],
+        importNames: ['redirect', 'permanentRedirect', 'useRouter', 'usePathname'],
         message: 'Please import from `@/navigation` instead.'
       }
     ]
