@@ -59,5 +59,10 @@
         "url": "https://www.linkedin.com/in/enricorestuccia"
       }
     }
+  },
+  "NotFoundPage": {
+    "404": "404",
+    "message": "Sorry, we can't find that page.",
+    "backToHome": "Back to Home"
   }
 }
