@@ -1,5 +1,11 @@
 # restx98-website
 
+## 0.4.0
+
+### Minor Changes
+
+- faec9d2: Not Found Page
+
 ## 0.3.0
 
 ### Minor Changes
