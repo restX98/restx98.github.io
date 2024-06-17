@@ -1,8 +1,20 @@
+import colors from "tailwindcss/colors";
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
+  content: ["./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
+    container: {
+      center: true,
+      padding: "2rem",
+    },
     extend: {
+      colors: {
+        transparent: colors.transparent,
+        white: colors.white,
+        black: colors.black,
+        primary: colors.zinc,
+      },
       margin: {
         "2px": "2px",
       },
@@ -22,9 +34,6 @@ module.exports = {
         tile: "linear-gradient(145deg, #161618, #1a1a1d)",
         "tile-snake": "linear-gradient(145deg, #528510, #45700e)",
         "tile-food": "linear-gradient(145deg, #c61e1e, #a71919)",
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
     },
   },

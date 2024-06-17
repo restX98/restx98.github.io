@@ -31,12 +31,10 @@ export default async function RootLayout({ children, params: { locale } }) {
       <body className={inter.variable}>
         <SnakeGameProvider>
           <NextIntlClientProvider messages={messages}>
-            <main className="fixed inset-0 flex h-dvh w-screen flex-col bg-zinc-800">
+            <main className="fixed inset-0 flex h-dvh w-screen flex-col bg-primary-800">
               <Navbar className="flex-none" />
               <div className="flex-auto">
-                <SnakeHouse className="container mx-auto px-8 py-6">
-                  {children}
-                </SnakeHouse>
+                <SnakeHouse className="container py-6">{children}</SnakeHouse>
               </div>
               <Footer className="flex-none" />
             </main>

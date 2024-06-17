@@ -21,7 +21,7 @@ function LocaleSwitcherSelect({ children, defaultValue, label }) {
   return (
     <label
       className={cn(
-        "relative text-gray-400",
+        "relative text-primary-400",
         isPending && "transition-opacity [&:disabled]:opacity-30",
       )}
     >

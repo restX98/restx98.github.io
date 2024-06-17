@@ -41,7 +41,7 @@ export function GlassCard({
           {children}
           {repoLink && (
             <Link
-              className="absolute bottom-0 right-0 m-1 rounded border border-gray-400 bg-white p-1 font-semibold text-zinc-800 shadow hover:bg-gray-100"
+              className="absolute bottom-0 right-0 m-1 rounded border border-primary-400 bg-white p-1 font-semibold text-primary-800 shadow hover:bg-primary-100"
               href={repoLink}
               target="_blank"
             >
