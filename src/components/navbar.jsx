@@ -2,7 +2,6 @@
 
 import { useTranslations, useMessages } from "next-intl";
 import { Link, usePathname } from "@/navigation";
-import LocaleSwitcher from "./locale-switcher";
 
 import { cn } from "@/lib/utils";
 
@@ -38,7 +37,7 @@ export function Navbar({ className }) {
   return (
     <nav className={className}>
       <div className="mx-auto p-2">
-        <div className="flex items-center justify-center space-x-10">
+        <div className="flex items-center justify-center space-x-2 sm:space-x-10">
           {items.map((item, id) => (
             <NavItem
               key={id}
@@ -47,7 +46,6 @@ export function Navbar({ className }) {
               active={pathname === item.href}
             />
           ))}
-          <LocaleSwitcher />
         </div>
       </div>
     </nav>
