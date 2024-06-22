@@ -12,7 +12,7 @@ function renderMarkdownToHTML(markdown) {
   return { __html: renderedHTML };
 }
 
-export function Markdown({ markdown }) {
+export default function Markdown({ markdown }) {
   markdown = markdown.trim();
   const markup = renderMarkdownToHTML(markdown);
   return <div dangerouslySetInnerHTML={markup} />;

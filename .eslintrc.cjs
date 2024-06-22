@@ -26,17 +26,32 @@ module.exports = {
   rules: {
     "@next/next/no-img-element": "off",
     "tailwindcss/no-custom-classname": "off",
-    'no-restricted-imports': [
-      'error',
+    "no-restricted-imports": [
+      "error",
       {
-        name: 'next/link',
-        message: 'Please import from `@/navigation` instead.'
+        paths: [
+          {
+            name: "next/link",
+            message: "Please import from `@/navigation` instead.",
+          },
+          {
+            name: "next/navigation",
+            importNames: [
+              "redirect",
+              "permanentRedirect",
+              "useRouter",
+              "usePathname",
+            ],
+            message: "Please import from `@/navigation` instead.",
+          },
+        ],
+        patterns: [
+          {
+            group: ["./", "../"],
+            message: "Relative imports are not allowed.",
+          },
+        ],
       },
-      {
-        name: 'next/navigation',
-        importNames: ['redirect', 'permanentRedirect', 'useRouter', 'usePathname'],
-        message: 'Please import from `@/navigation` instead.'
-      }
-    ]
+    ],
   },
 };

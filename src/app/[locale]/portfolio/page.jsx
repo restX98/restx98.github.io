@@ -1,7 +1,8 @@
 "use client";
 
 import { useTranslations, useMessages } from "next-intl";
-import { GlassCard } from "@/components/glass-card";
+import CardHeader from "@/components/cards/card-header";
+import CardProject from "@/components/cards/card-project";
 
 export default function Portfolio() {
   const t = useTranslations("PortfolioPage");
@@ -11,19 +12,19 @@ export default function Portfolio() {
 
   return (
     <>
-      <GlassCard className="snake-box mb-5" title={t("title")} />
+      <CardHeader className="snake-box" title={t("title")} />
       <div className="grid auto-rows-fr grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-4">
         {projects.map((p) => (
-          <GlassCard
+          <CardProject
             className="snake-box"
             key={p}
             title={t(`projects.${p}.name`)}
             image={t(`projects.${p}.image`)}
-            link={t(`projects.${p}.pageUrl`)}
-            repoLink={t(`projects.${p}.repoUrl`)}
+            hrefPage={t(`projects.${p}.pageUrl`)}
+            hrefRepo={t(`projects.${p}.repoUrl`)}
           />
         ))}
-        <GlassCard className="snake-box" title="Coming Soon..." />
+        <CardProject className="snake-box" title="Coming Soon..." />
       </div>
     </>
   );

@@ -21,7 +21,7 @@ function LocaleSwitcherSelect({ children, defaultValue, label }) {
   return (
     <label
       className={cn(
-        "relative text-gray-400",
+        "relative text-primary-400",
         isPending && "transition-opacity [&:disabled]:opacity-30",
       )}
     >
@@ -44,9 +44,9 @@ export default function LocaleSwitcher() {
 
   return (
     <LocaleSwitcherSelect defaultValue={locale} label={t("label")}>
-      {locales.map((cur) => (
-        <option key={cur} value={cur}>
-          {t("locale", { locale: cur })}
+      {locales.map((l) => (
+        <option key={l} value={l}>
+          {t("locale", { locale: l })}
         </option>
       ))}
     </LocaleSwitcherSelect>
