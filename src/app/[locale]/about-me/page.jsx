@@ -1,7 +1,7 @@
 "use client";
 
-import { GlassCard } from "@/components/glass-card";
-import { Markdown } from "@/components/markdown";
+import CardContainer from "@/components/cards/card-container";
+import Markdown from "@/components/markdown";
 
 import { useTranslations } from "next-intl";
 
@@ -9,10 +9,10 @@ export default function AboutMe() {
   const t = useTranslations("AboutMePage");
 
   return (
-    <GlassCard className="snake-box">
-      <div className="mt-5 text-left">
+    <CardContainer className="snake-box p-5">
+      <div className="text-left">
         <Markdown markdown={t("content")} />
       </div>
-    </GlassCard>
+    </CardContainer>
   );
 }
