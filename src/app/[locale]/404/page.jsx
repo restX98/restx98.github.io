@@ -2,14 +2,14 @@
 
 import { useTranslations } from "next-intl";
 import { Link } from "@/navigation";
-import { GlassContainer } from "@/components/glass-container";
+import CardContainer from "@/components/cards/card-container";
 
 export default function NotFound() {
   const t = useTranslations("NotFoundPage");
 
   return (
     <>
-      <GlassContainer className="snake-box">
+      <CardContainer className="snake-box">
         <div className="mx-auto max-w-screen-xl px-4 py-8 lg:px-6 lg:py-16">
           <div className="mx-auto max-w-screen-sm text-center">
             <h1 className="mb-4 text-7xl font-extrabold tracking-tight text-lime-600 lg:text-9xl">
@@ -27,7 +27,7 @@ export default function NotFound() {
             </Link>
           </div>
         </div>
-      </GlassContainer>
+      </CardContainer>
     </>
   );
 }

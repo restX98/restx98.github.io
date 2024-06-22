@@ -2,7 +2,7 @@
 
 import { cn } from "@/lib/utils";
 
-export function GlassContainer({ children, className }) {
+export default function CardContainer({ children, className }) {
   return (
     <div
       className={cn(

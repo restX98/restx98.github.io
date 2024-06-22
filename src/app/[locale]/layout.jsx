@@ -3,8 +3,8 @@ import { getMessages, unstable_setRequestLocale } from "next-intl/server";
 import { Inter } from "next/font/google";
 
 import { SnakeGameProvider, SnakeHouse } from "@restx98/snake-house-react";
-import { Navbar } from "@/components/navbar";
-import { Footer } from "@/components/footer";
+import { Navbar } from "@/components/layout/navbar";
+import { Footer } from "@/components/layout/footer";
 
 import { siteConfig } from "@/config/site";
 

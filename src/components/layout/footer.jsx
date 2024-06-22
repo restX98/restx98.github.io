@@ -1,6 +1,6 @@
 "use client";
 
-import LocaleSwitcher from "./locale-switcher";
+import LocaleSwitcher from "@/components/locale-switcher";
 
 export function Footer({ className }) {
   return (
