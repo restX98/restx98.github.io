@@ -1,36 +1,105 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Portfolio Website
 
-## Getting Started
+This is my personal portfolio website built with [Next.js](https://nextjs.org/) and hosted on [GitHub Pages](https://pages.github.com/).
 
-First, run the development server:
+## 🌍 Live Demo
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+🔗 [**Visit My Portfolio**](https://restx98.github.io/)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Getting Started
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Follow these steps to set up the project locally.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Prerequisites
 
-## Learn More
+Ensure you have the following installed:
 
-To learn more about Next.js, take a look at the following resources:
+- [Node.js](https://nodejs.org/) (LTS recommended)
+- [pnpm](https://pnpm.io/)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Installation
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+1. **Clone the repository**
 
-## Deploy on Vercel
+   ```sh
+   git clone git@github.com:restX98/restx98.github.io.git
+   cd restx98.github.io
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+2. **Authenticate with GitHub NPM Registry** Some dependencies require authentication with a GitHub token. The repository already includes a `.npmrc` file with the following content:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+   ```sh
+   @restx98:registry=https://npm.pkg.github.com
+   //npm.pkg.github.com/:_authToken=${TOKEN}
+   always-auth=true
+   ```
+
+   You need to replace `${TOKEN}` with your actual GitHub token manually or set it as an environment variable:
+
+   ```sh
+   export TOKEN=your_github_personal_access_token
+   ```
+
+   **Note:** Ensure that your GitHub token has the `read:packages` permission to access the required dependencies.
+
+3. **Install dependencies**
+
+   ```sh
+   pnpm install
+   ```
+
+4. **Run the development server**
+
+   ```sh
+   pnpm dev
+   ```
+
+5. Open [http://localhost:3000](http://localhost:3000) in your browser to see the website.
+
+## 📦 Making Changes
+
+To modify the project, follow these steps:
+
+1. **Create a new branch**
+
+   ```sh
+   git checkout -b [feature|bugfix]/branch-name
+   ```
+
+2. **Commit your changes**
+
+   ```sh
+   git add .
+   git commit -m "Your commit message"
+   ```
+
+3. **Generate a changeset**
+
+   ```sh
+   pnpm changeset
+   ```
+
+   This will create a file inside the `.changeset` that needs to be committed.
+
+4. **Commit the changeset file**
+
+   ```sh
+   git add .changeset/
+   git commit -m "Changeset"
+   ```
+
+5. **Open a Pull Request** on GitHub.
+
+6. **Merge the PR** once it has been reviewed and approved.
+
+
+## 🎨 Technologies Used
+
+- Next.js
+- React
+- Tailwind CSS
+- GitHub Pages
+
+---
+
+🚀 **Happy coding!**
