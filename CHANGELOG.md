@@ -1,5 +1,11 @@
 # restx98-website
 
+## 0.5.1
+
+### Patch Changes
+
+- 157b5df: Edited readme
+
 ## 0.5.0
 
 ### Minor Changes
