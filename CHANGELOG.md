@@ -1,5 +1,11 @@
 # restx98-website
 
+## 0.5.2
+
+### Patch Changes
+
+- 5109c3c: Added Rubik Cube 3D Project
+
 ## 0.5.1
 
 ### Patch Changes
