@@ -24,7 +24,7 @@ export default function CardProject({
           "size-full px-10 py-6 text-center text-white",
         )}
       >
-        <span className="uppercase">{title}</span>
+        <span className="font-bold uppercase">{title}</span>
         <div className="absolute bottom-0 right-0 m-1 flex space-x-1">
           {hrefPage && (
             <Link
@@ -48,7 +48,7 @@ export default function CardProject({
       </div>
       {image && (
         <img
-          className="max-h-full max-w-full object-cover"
+          className="h-full max-h-full max-w-full object-cover"
           src={image}
           alt={title}
         />

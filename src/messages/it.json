@@ -23,12 +23,6 @@
   "PortfolioPage": {
     "title": "Qui troverai tutti i miei progetti:",
     "projects": {
-      "snake-house-react": {
-        "name": "Snake House React",
-        "repoUrl": "https://github.com/restX98/snake-house-react",
-        "pageUrl": "https://restx98.github.io/snake-house-react/",
-        "image": "/images/snake-house-thumbnail.png"
-      },
       "commerce-laravel": {
         "name": "eCommerce Laravel",
         "repoUrl": "https://github.com/restX98/commerce-laravel",
@@ -36,10 +30,22 @@
         "image": ""
       },
       "unicar-app": {
-        "name": "UniCar App",
+        "name": "UniCar App - In progress",
         "repoUrl": "https://github.com/restX98/UniCarApp",
         "pageUrl": "",
         "image": ""
+      },
+      "snake-house-react": {
+        "name": "Snake House React",
+        "repoUrl": "https://github.com/restX98/snake-house-react",
+        "pageUrl": "https://restx98.github.io/snake-house-react/",
+        "image": "/images/snake-house-thumbnail.png"
+      },
+      "rubik-cube-3D": {
+        "name": "Rubik's Cube 3D",
+        "repoUrl": "https://github.com/restX98/rubik-cube-opengl",
+        "pageUrl": "",
+        "image": "/images/rubik_cube.gif"
       }
     }
   },
