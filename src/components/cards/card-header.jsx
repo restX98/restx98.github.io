@@ -10,7 +10,7 @@ export default function CardHeader({
 }) {
   return (
     <CardContainer
-      className={cn(className, "mb-5 py-3 text-center text-white")}
+      className={cn(className, "mb-5 py-3 text-center text-white font-bold")}
     >
       <h1 className={cn(force_uppercase && "uppercase")}>{title}</h1>
     </CardContainer>
