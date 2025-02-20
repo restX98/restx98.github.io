@@ -46,6 +46,12 @@
         "repoUrl": "https://github.com/restX98/rubik-cube-opengl",
         "pageUrl": "",
         "image": "/images/rubik_cube.gif"
+      },
+      "asteroid-avoider": {
+        "name": "Asteroid Avoider",
+        "repoUrl": "https://github.com/restX98/asteroid-avoider",
+        "pageUrl": "https://asteroid-avoider.vercel.app/",
+        "image": "/images/asteroid_avoider.gif"
       }
     }
   },
