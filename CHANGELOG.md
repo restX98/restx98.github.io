@@ -1,5 +1,11 @@
 # restx98-website
 
+## 0.5.3
+
+### Patch Changes
+
+- 12b3ac4: Added Asteroid Avoider project
+
 ## 0.5.2
 
 ### Patch Changes
